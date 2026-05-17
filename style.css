@@ -6,34 +6,31 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #333;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
 }
 
 header {
-  background: #1e3a8a;
+  background: #1e40af;
   color: white;
-  padding: 1rem 5%;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-nav h2 {
-  font-size: 1.5rem;
-}
+nav h2 { font-size: 1.6rem; }
 
 nav ul {
   display: flex;
@@ -45,66 +42,79 @@ nav a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  transition: 0.3s;
 }
 
-nav a:hover {
-  color: #60a5fa;
-}
+nav a:hover { color: #93c5fd; }
 
 /* Sections */
 section {
-  padding: 100px 5% 80px;
+  padding: 110px 5% 90px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 #accueil {
   text-align: center;
-  padding-top: 180px;
-  background: linear-gradient(rgba(30,58,138,0.9), rgba(30,58,138,0.8)), url('https://source.unsplash.com/random/1600x900/?developer') center/cover;
+  padding-top: 200px;
+  background: linear-gradient(rgba(30,64,175,0.85), rgba(30,64,175,0.9)), url('https://source.unsplash.com/random/1600x900/?coding') center/cover;
   color: white;
   min-height: 100vh;
 }
 
 #accueil h1 {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   margin-bottom: 1rem;
+  animation: fadeInDown 1s ease;
 }
 
 #accueil h3 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   margin-bottom: 1.5rem;
-  color: #93c5fd;
+  color: #bfdbfe;
 }
 
 .btn {
   display: inline-block;
   background: #3b82f6;
   color: white;
-  padding: 12px 30px;
+  padding: 14px 32px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 20px;
-  transition: 0.3s;
+  transition: all 0.4s;
+  box-shadow: 0 5px 15px rgba(59,130,246,0.4);
 }
 
 .btn:hover {
   background: #2563eb;
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(59,130,246,0.5);
 }
 
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #1e3a8a;
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Skills */
+.project, .exp {
+  background: white;
+  padding: 28px;
+  margin-bottom: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.4s;
+}
+
+.project:hover, .exp:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
@@ -112,42 +122,37 @@ h2 {
   background: white;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+  transition: 0.3s;
 }
 
-/* Experience & Projects */
-.exp, .project {
-  background: white;
-  padding: 25px;
-  margin-bottom: 25px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+.skills-grid div:hover {
+  transform: scale(1.03);
 }
 
-.exp h3, .project h3 {
-  color: #1e3a8a;
-  margin-bottom: 10px;
-}
-
-/* Contact */
-#contact {
-  text-align: center;
-  background: #1e3a8a;
+.btn-small {
+  display: inline-block;
+  margin-top: 12px;
+  background: #1e40af;
   color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
 }
 
-#contact a {
-  color: #60a5fa;
+.social a {
+  font-size: 2rem;
+  margin: 0 15px;
+  color: #1e40af;
+  transition: 0.3s;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav ul {
-    gap: 1rem;
-    font-size: 0.9rem;
-  }
-  
-  #accueil h1 {
-    font-size: 2.8rem;
-  }
+.social a:hover { color: #3b82f6; transform: scale(1.3); }
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #1e40af;
+  color: white;
 }
