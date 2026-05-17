@@ -208,21 +208,79 @@ footer {
   color: white;
 }
 
-/* Responsive */
+
+/* =========================================
+   Responsive (Optimisé pour Mobile)
+   ========================================= */
 @media (max-width: 768px) {
-  nav ul { 
-    gap: 1rem; 
-    font-size: 0.9rem; 
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-  }
+  /* Menu de navigation */
   nav {
     flex-direction: column;
+    padding: 10px 5%;
   }
-  #accueil h1 { font-size: 2.8rem; }
-  .profile-img { width: 140px; height: 140px; }
-  .btn { display: block; margin: 10px auto; width: 80%; }
+  nav h2 { 
+    margin-bottom: 10px; 
+    font-size: 1.4rem; 
+  }
+  nav ul { 
+    gap: 0.6rem 1rem; /* Espacement vertical et horizontal */
+    font-size: 0.85rem; 
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Section Accueil */
+  #accueil { 
+    /* On augmente un peu l'espace en haut pour que le menu empilé ne cache pas la photo */
+    padding: 180px 5% 80px; 
+  }
+  #accueil h1 { 
+    font-size: 2.2rem; 
+  }
+  #accueil h3 {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+  .profile-img { 
+    width: 120px; 
+    height: 120px; 
+    border-width: 4px;
+    margin-bottom: 15px;
+  }
+
+  /* Marges des sections réduites pour mobile */
+  section {
+    padding: 60px 5% 50px; 
+  }
+  h2 { 
+    font-size: 2rem; 
+    margin-bottom: 2rem;
+  }
+
+  /* Forcer les cartes et compétences sur 1 seule colonne */
+  .skills-grid {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  /* Boutons plus adaptés au toucher (Touch-friendly) */
+  .btn { 
+    display: block; 
+    margin: 15px auto; 
+    width: 100%; 
+    max-width: 300px; /* Évite que le bouton soit trop large sur tablette */
+    text-align: center;
+  }
+
+  /* Réseaux sociaux */
+  .social a {
+    font-size: 1.8rem;
+    margin: 0 10px;
+  }
+  
+  #about p, #contact p {
+    font-size: 1rem;
+  }
 }
 
 
@@ -270,10 +328,12 @@ body.export-pdf #accueil h1 {
 body.export-pdf #accueil h3 {
   font-size: 1.3rem !important;
   margin-bottom: 5px !important;
+  color: #bfdbfe !important;
 }
 
 body.export-pdf #accueil p {
   font-size: 1rem !important;
+  color: white !important;
 }
 
 /* Restructurer les titres de sections */
@@ -337,4 +397,5 @@ body.export-pdf .social {
 body.export-pdf .social a {
   font-size: 1.4rem !important;
   margin-right: 15px !important;
+  color: #1e40af !important;
 }
