@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+header {
+  background: #1e3a8a;
+  color: white;
+  padding: 1rem 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #60a5fa;
+}
+
+/* Sections */
+section {
+  padding: 100px 5% 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#accueil {
+  text-align: center;
+  padding-top: 180px;
+  background: linear-gradient(rgba(30,58,138,0.9), rgba(30,58,138,0.8)), url('https://source.unsplash.com/random/1600x900/?developer') center/cover;
+  color: white;
+  min-height: 100vh;
+}
+
+#accueil h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+#accueil h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #93c5fd;
+}
+
+.btn {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2563eb;
+  transform: translateY(-5px);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #1e3a8a;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.skills-grid div {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Experience & Projects */
+.exp, .project {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.exp h3, .project h3 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+/* Contact */
+#contact {
+  text-align: center;
+  background: #1e3a8a;
+  color: white;
+}
+
+#contact a {
+  color: #60a5fa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  #accueil h1 {
+    font-size: 2.8rem;
+  }
+}
