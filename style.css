@@ -5,8 +5,7 @@
 }
 
 html {
-  /* Ajout du défilement fluide pour le menu de navigation */
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth; /* Animation fluide lors du clic sur le menu */
 }
 
 body {
@@ -224,4 +223,118 @@ footer {
   #accueil h1 { font-size: 2.8rem; }
   .profile-img { width: 140px; height: 140px; }
   .btn { display: block; margin: 10px auto; width: 80%; }
+}
+
+
+/* =========================================
+   MODE EXPORT PDF (S'active via JavaScript)
+   ========================================= */
+
+body.export-pdf {
+  background: white !important;
+}
+
+/* Cacher le menu de navigation, le bouton et le footer sur le PDF */
+body.export-pdf #main-header,
+body.export-pdf .btn,
+body.export-pdf footer,
+body.export-pdf .btn-small {
+  display: none !important;
+}
+
+/* Réduire les marges et paddings pour gagner de la place (Format CV) */
+body.export-pdf section {
+  padding: 15px 20px !important;
+  max-width: 100%;
+}
+
+/* Transformer l'accueil en en-tête de CV classique */
+body.export-pdf #accueil {
+  min-height: auto !important;
+  padding: 30px 20px !important;
+  background: #1e40af !important; 
+}
+
+body.export-pdf .profile-img {
+  width: 120px !important;
+  height: 120px !important;
+  margin-bottom: 10px !important;
+  border-width: 3px !important;
+}
+
+body.export-pdf #accueil h1 {
+  font-size: 2.2rem !important;
+  margin-bottom: 5px !important;
+}
+
+body.export-pdf #accueil h3 {
+  font-size: 1.3rem !important;
+  margin-bottom: 5px !important;
+}
+
+body.export-pdf #accueil p {
+  font-size: 1rem !important;
+}
+
+/* Restructurer les titres de sections */
+body.export-pdf h2 {
+  font-size: 1.6rem !important;
+  margin-bottom: 15px !important;
+  text-align: left !important;
+  border-bottom: 2px solid #1e40af;
+  padding-bottom: 5px;
+  color: #1e40af !important;
+}
+
+body.export-pdf #about p,
+body.export-pdf #contact p {
+  text-align: left !important;
+  font-size: 1rem !important;
+  margin-bottom: 5px !important;
+}
+
+/* Simplifier les cartes pour qu'elles rentrent mieux */
+body.export-pdf .skills-grid div, 
+body.export-pdf .exp, 
+body.export-pdf .project {
+  padding: 12px 15px !important;
+  margin-bottom: 10px !important;
+  box-shadow: none !important;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px !important;
+  page-break-inside: avoid; /* Évite qu'une case soit coupée sur deux pages */
+}
+
+/* Forcer l'affichage sur 2 colonnes pour gagner de la place */
+body.export-pdf .skills-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; 
+  gap: 15px !important;
+}
+
+body.export-pdf .exp h3, 
+body.export-pdf .project h3 {
+  font-size: 1.15rem !important;
+  margin-bottom: 5px !important;
+}
+
+body.export-pdf .date {
+  margin: 2px 0 5px !important;
+  font-size: 0.95rem !important;
+}
+
+body.export-pdf ul {
+  font-size: 0.95rem !important;
+  margin-left: 25px !important;
+}
+
+body.export-pdf .social {
+  text-align: left !important;
+  margin-top: 10px !important;
+}
+
+/* Remplacer les icônes de réseaux par des textes clairs sur un CV */
+body.export-pdf .social a {
+  font-size: 1.4rem !important;
+  margin-right: 15px !important;
 }
