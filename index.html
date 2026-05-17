@@ -130,22 +130,28 @@
     </footer>
   </div>
 
-  <script>
+ <script>
     document.getElementById('btn-download-pdf').addEventListener('click', async function () {
       const element = document.getElementById('portfolio-content');
       
       // 1. On active le mode "CV compact"
       document.body.classList.add('export-pdf');
 
-      // Petite pause pour laisser le temps au navigateur d'appliquer le nouveau CSS
-      await new Promise(resolve => setTimeout(resolve, 300));
+      // Petite pause plus longue pour les téléphones (laisse le temps au CSS de s'appliquer)
+      await new Promise(resolve => setTimeout(resolve, 500));
 
-      // 2. Options de configuration du PDF format A4
+      // 2. Options de configuration anti-coupure
       const opt = {
-        margin:       10, // Marges de 10mm partout
+        margin:       [10, 0, 10, 0], // Marges [Haut, Droite, Bas, Gauche]
         filename:     'CV_Harouna_Traore.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true, windowWidth: 1000 }, 
+        html2canvas:  { 
+          scale: 2, 
+          useCORS: true, 
+          windowWidth: 800, // Largeur fixe
+          x: 0, // Force la capture depuis le bord gauche absolu !
+          scrollY: 0
+        }, 
         jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
       };
 
