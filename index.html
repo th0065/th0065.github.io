@@ -6,9 +6,10 @@
   <title>Harouna Traoré | Développeur Fullstack</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-  <header>
+  <header id="main-header">
     <nav>
       <h2>Harouna Traoré</h2>
       <ul>
@@ -22,107 +23,140 @@
     </nav>
   </header>
 
+  <div id="portfolio-content">
+    <section id="accueil">
+      <div class="hero-content">
+        <img src="profil.jpeg" alt="Harouna Traoré" class="profile-img">
+        <h1>Harouna Traoré</h1>
+        <h3>Développeur Fullstack & Technicien Informatique</h3>
+        <p>Master en Génie Logiciel • Passionné par le développement web/mobile et les infrastructures réseaux.</p>
+        <a href="#contact" class="btn">Me contacter</a>
+        <button id="btn-download-pdf" class="btn btn-cv"><i class="fas fa-download"></i> Télécharger en PDF</button>
+      </div>
+    </section>
 
-<section id="accueil">
-    <div class="hero-content">
-      <img src="profil.jpeg" alt="Harouna Traoré" class="profile-img">
-      <h1>Harouna Traoré</h1>
-      <h3>Développeur Fullstack & Technicien Informatique</h3>
-      <p>Master en Génie Logiciel • Passionné par le développement web/mobile et les infrastructures réseaux.</p>
-      <a href="#contact" class="btn">Me contacter</a>
-      <a href="CV_Harouna_Traore.pdf" class="btn btn-cv" download><i class="fas fa-download"></i> Télécharger mon CV</a>
-    </div>
-  </section>
-  <section id="about">
-    <h2>À propos de moi</h2>
-    <p>Technicien Informatique et Ingénieur Logiciel polyvalent, rigoureux et orienté solution. 
-    Fort d'une expertise en configuration d'infrastructures réseau et en développement d'applications web.</p>
-  </section>
+    <section id="about">
+      <h2>À propos de moi</h2>
+      <p>Technicien Informatique et Ingénieur Logiciel polyvalent, rigoureux et orienté solution. 
+      Fort d'une expertise en configuration d'infrastructures réseau et en développement d'applications web.</p>
+    </section>
 
-  <section id="skills">
-    <h2>Compétences Techniques</h2>
-    <div class="skills-grid">
-      <div><strong>Développement :</strong> Java (Spring Boot), PHP, JavaScript, Angular, Flutter</div>
-      <div><strong>Systèmes :</strong> Linux (Debian), Windows Server, Active Directory</div>
-      <div><strong>Réseaux :</strong> Cisco (VLAN, DHCP), Sécurité réseau, Wi-Fi</div>
-      <div><strong>Outils :</strong> Docker, Kubernetes, Git, MySQL, Postman</div>
-    </div>
-  </section>
+    <section id="skills">
+      <h2>Compétences Techniques</h2>
+      <div class="skills-grid">
+        <div><strong>Développement :</strong> Java (Spring Boot), PHP, JavaScript, Angular, Flutter</div>
+        <div><strong>Systèmes :</strong> Linux (Debian), Windows Server, Active Directory</div>
+        <div><strong>Réseaux :</strong> Cisco (VLAN, DHCP), Sécurité réseau, Wi-Fi</div>
+        <div><strong>Outils :</strong> Docker, Kubernetes, Git, MySQL, Postman</div>
+      </div>
+    </section>
 
-  <section id="experience">
-    <h2>Expériences Professionnelles</h2>
-    <div class="exp">
-      <h3>Développeur Stagiaire - COUD (SAG)</h3>
-      <p>Novembre 2022 – Janvier 2023</p>
-      <ul>
-        <li>Développement d'applications web (HTML, CSS, JavaScript, PHP)</li>
-        <li>Amélioration des interfaces utilisateurs</li>
-      </ul>
-    </div>
-    <div class="exp">
-      <h3>Technicien Maintenancier - COUD</h3>
-      <p>Juillet 2020 – Septembre 2020</p>
-      <ul>
-        <li>Configuration infrastructure réseau (routeurs, switches, Wi-Fi)</li>
-        <li>Diagnostic et résolution d'incidents</li>
-      </ul>
-    </div>
-  </section>
+    <section id="experience">
+      <h2>Expériences Professionnelles</h2>
+      <div class="exp">
+        <h3>Développeur Stagiaire - COUD (SAG)</h3>
+        <p class="date">Novembre 2022 – Janvier 2023</p>
+        <ul>
+          <li>Développement d'applications web (HTML, CSS, JavaScript, PHP)</li>
+          <li>Amélioration des interfaces utilisateurs</li>
+        </ul>
+      </div>
+      <div class="exp">
+        <h3>Technicien Maintenancier - COUD</h3>
+        <p class="date">Juillet 2020 – Septembre 2020</p>
+        <ul>
+          <li>Configuration infrastructure réseau (routeurs, switches, Wi-Fi)</li>
+          <li>Diagnostic et résolution d'incidents</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="projects">
-   <div class="project">
-      <h3>AtelierCoutureAsp.net</h3>
-      <p>Application de gestion d'atelier de couture développée avec ASP.NET</p>
-      <a href="https://github.com/th0065/AtelierCoutureAsp.net" target="_blank" class="btn-small">Voir sur GitHub →</a>
-    </div>
+    <section id="projects">
+      <h2>Mes Projets</h2>
+      <div class="skills-grid"> 
+        <div class="project">
+          <h3>AtelierCoutureAsp.net</h3>
+          <p>Application de gestion d'atelier de couture développée avec ASP.NET</p>
+          <a href="https://github.com/th0065/AtelierCoutureAsp.net" target="_blank" class="btn-small">Voir sur GitHub →</a>
+        </div>
 
-    <div class="project">
-      <h3>Chat en temps réel</h3>
-      <p>Application de messagerie instantanée</p>
-      <a href="https://github.com/th0065/chat_in_real_time" target="_blank" class="btn-small">Voir sur GitHub →</a>
-    </div>
+        <div class="project">
+          <h3>Chat en temps réel</h3>
+          <p>Application de messagerie instantanée</p>
+          <a href="https://github.com/th0065/chat_in_real_time" target="_blank" class="btn-small">Voir sur GitHub →</a>
+        </div>
 
-    <div class="project">
-      <h3>School Management System</h3>
-      <p>Système de gestion scolaire (TypeScript)</p>
-      <a href="https://github.com/th0065/SchoolManagement" target="_blank" class="btn-small">Voir sur GitHub →</a>
-    </div>
+        <div class="project">
+          <h3>School Management System</h3>
+          <p>Système de gestion scolaire (TypeScript)</p>
+          <a href="https://github.com/th0065/SchoolManagement" target="_blank" class="btn-small">Voir sur GitHub →</a>
+        </div>
 
-    <div class="project">
-      <h3>School EJB / SchoolJava</h3>
-      <p>Applications de gestion scolaire en Java / Java EE (EJB)</p>
-      <a href="https://github.com/th0065/schoolEJB" target="_blank" class="btn-small">Voir schoolEJB →</a>
-      <a href="https://github.com/th0065/SchoolJava" target="_blank" class="btn-small">Voir SchoolJava →</a>
-    </div>
+        <div class="project">
+          <h3>School EJB / SchoolJava</h3>
+          <p>Applications de gestion scolaire en Java / Java EE (EJB)</p>
+          <a href="https://github.com/th0065/schoolEJB" target="_blank" class="btn-small">Voir schoolEJB →</a>
+          <a href="https://github.com/th0065/SchoolJava" target="_blank" class="btn-small">Voir SchoolJava →</a>
+        </div>
 
-    <div class="project">
-      <h3>Sécurité Web Java (Projet de groupe)</h3>
-      <p>Projet JEE sur la sécurité des applications web</p>
-      <a href="https://github.com/th0065/SecuriteWebJava" target="_blank" class="btn-small">Voir sur GitHub →</a>
-    </div>
+        <div class="project">
+          <h3>Sécurité Web Java</h3>
+          <p>Projet JEE sur la sécurité des applications web (Projet de groupe)</p>
+          <a href="https://github.com/th0065/SecuriteWebJava" target="_blank" class="btn-small">Voir sur GitHub →</a>
+        </div>
 
-    <div class="project">
-      <h3>Plateforme e-commerce agricole (Projet Académique)</h3>
-      <p>Spring Boot + Angular + Flutter + Keycloak</p>
+        <div class="project">
+          <h3>Plateforme e-commerce agricole</h3>
+          <p>Spring Boot + Angular + Flutter + Keycloak (Projet Académique)</p>
+          <a href="https://github.com/th0065" target="_blank" class="btn-small">Voir plus...</a>
+        </div>
+      </div>
+    </section>
 
-       <p  href="https://github.com/th0065" >voir plus  ... </p>
-      
-    </div>
-  </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><i class="fas fa-envelope"></i> tharouna4@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +221 70 312 26 53</p>
+      <div class="social">
+        <a href="https://github.com/th0065" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://gitlab.com/th0065" target="_blank"><i class="fab fa-gitlab"></i></a>
+        <a href="https://www.linkedin.com/in/harouna-traore-44b7091b2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><i class="fas fa-envelope"></i> tharouna4@gmail.com</p>
-    <p><i class="fas fa-phone"></i> +221 70 312 26 53</p>
-    <p>
-      <a href="https://github.com/th0065" target="_blank">GitHub</a> | 
-      <a href="https://gitlab.com/th0065" target="_blank">GitLab</a> |
-        <a href="https://www.linkedin.com/in/harouna-traore-44b7091b2/" target="_blank">linkdIn</a>
-    </p>
-  </section>
+    <footer>
+      <p>© 2026 Harouna Traoré - Développeur Fullstack</p>
+    </footer>
+  </div>
 
-  <footer>
-    <p>© 2026 Harouna Traoré - Développeur Fullstack</p>
-  </footer>
+  <script>
+    document.getElementById('btn-download-pdf').addEventListener('click', function () {
+      const element = document.getElementById('portfolio-content');
+      const header = document.getElementById('main-header');
+      const btn = document.getElementById('btn-download-pdf');
+
+      // 1. Modifications temporaires pour le PDF
+      // On cache le bouton de téléchargement pour qu'il n'apparaisse pas sur le PDF
+      btn.style.display = 'none'; 
+      // On rend le header relatif pour éviter qu'il ne se superpose au texte sur chaque page PDF
+      header.style.position = 'relative';
+
+      // 2. Options de configuration du PDF
+      const opt = {
+        margin:       [10, 0, 10, 0], // Marges [Haut, Droite, Bas, Gauche]
+        filename:     'Harouna_Traore_Portfolio.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true }, // useCORS permet de charger les images/polices externes
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      // 3. Génération
+      html2pdf().set(opt).from(element).save().then(() => {
+        // 4. On remet la page dans son état normal après le téléchargement
+        btn.style.display = 'inline-block';
+        header.style.position = 'fixed';
+      });
+    });
+  </script>
 </body>
 </html>
