@@ -15,6 +15,7 @@ body {
   background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
 }
 
+/* --- EN-TÊTE ET NAVIGATION --- */
 header {
   background: #1e40af;
   color: white;
@@ -51,7 +52,7 @@ nav a {
 
 nav a:hover { color: #93c5fd; }
 
-/* Hero Section */
+/* --- SECTION ACCUEIL (HERO) --- */
 #accueil {
   text-align: center;
   padding: 180px 5% 120px;
@@ -86,6 +87,7 @@ nav a:hover { color: #93c5fd; }
   color: #bfdbfe;
 }
 
+/* --- BOUTONS --- */
 .btn {
   display: inline-block;
   background: #3b82f6;
@@ -115,7 +117,23 @@ nav a:hover { color: #93c5fd; }
   background: #059669;
 }
 
-/* Sections */
+.btn-small {
+  display: inline-block;
+  margin-top: 12px;
+  background: #1e40af;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.btn-small:hover {
+  background: #3b82f6;
+}
+
+/* --- SECTIONS GÉNÉRALES --- */
 section {
   padding: 100px 5% 90px;
   max-width: 1200px;
@@ -136,6 +154,7 @@ h2 {
   font-size: 1.1rem;
 }
 
+/* --- GRILLES (COMPÉTENCES, PROJETS, EXPÉRIENCES) --- */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -167,22 +186,7 @@ h2 {
   margin: 8px 0 12px;
 }
 
-.btn-small {
-  display: inline-block;
-  margin-top: 12px;
-  background: #1e40af;
-  color: white;
-  padding: 8px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: 0.3s;
-}
-
-.btn-small:hover {
-  background: #3b82f6;
-}
-
+/* --- RÉSEAUX SOCIAUX ET FOOTER --- */
 .social {
   text-align: center;
   margin-top: 20px;
@@ -213,66 +217,93 @@ footer {
    Responsive (Optimisé pour Mobile)
    ========================================= */
 @media (max-width: 768px) {
-  /* Menu de navigation */
-  nav {
-    flex-direction: column;
-    padding: 10px 5%;
-  }
-  nav h2 { 
-    margin-bottom: 10px; 
-    font-size: 1.4rem; 
-  }
-  nav ul { 
-    gap: 0.6rem 1rem; /* Espacement vertical et horizontal */
-    font-size: 0.85rem; 
-    flex-wrap: wrap;
-    justify-content: center;
+  /* On annule la position fixe pour que le menu ne cache plus l'écran */
+  header {
+    position: relative;
   }
 
-  /* Section Accueil */
+  nav {
+    flex-direction: column;
+    padding: 15px 5%;
+  }
+
+  nav h2 { 
+    margin-bottom: 15px; 
+    font-size: 1.5rem; 
+    text-align: center;
+  }
+
+  /* Création d'un menu défilant horizontalement style application */
+  nav ul { 
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    gap: 12px;
+    width: 100%;
+    -ms-overflow-style: none;  /* Masque la scrollbar sur IE/Edge */
+    scrollbar-width: none;  /* Masque la scrollbar sur Firefox */
+  }
+  
+  /* Masque la scrollbar sur Chrome/Safari/Webkit */
+  nav ul::-webkit-scrollbar { 
+    display: none; 
+  }
+
+  /* Boutons du menu mobile */
+  nav a {
+    white-space: nowrap;
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+  }
+
+  /* L'espace au-dessus de l'accueil est réduit car le menu n'est plus fixe */
   #accueil { 
-    /* On augmente un peu l'espace en haut pour que le menu empilé ne cache pas la photo */
-    padding: 180px 5% 80px; 
+    padding: 40px 5% 60px; 
+    min-height: auto;
   }
+
   #accueil h1 { 
-    font-size: 2.2rem; 
+    font-size: 2rem; 
   }
+
   #accueil h3 {
     font-size: 1.1rem;
     margin-bottom: 25px;
   }
+
   .profile-img { 
-    width: 120px; 
-    height: 120px; 
+    width: 130px; 
+    height: 130px; 
     border-width: 4px;
     margin-bottom: 15px;
   }
 
-  /* Marges des sections réduites pour mobile */
   section {
     padding: 60px 5% 50px; 
   }
+
   h2 { 
-    font-size: 2rem; 
-    margin-bottom: 2rem;
+    font-size: 1.8rem; 
+    margin-bottom: 1.5rem;
   }
 
-  /* Forcer les cartes et compétences sur 1 seule colonne */
   .skills-grid {
     grid-template-columns: 1fr; 
     gap: 15px;
   }
 
-  /* Boutons plus adaptés au toucher (Touch-friendly) */
   .btn { 
     display: block; 
     margin: 15px auto; 
     width: 100%; 
-    max-width: 300px; /* Évite que le bouton soit trop large sur tablette */
+    max-width: 300px; 
     text-align: center;
   }
 
-  /* Réseaux sociaux */
   .social a {
     font-size: 1.8rem;
     margin: 0 10px;
