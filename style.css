@@ -35,7 +35,7 @@ nav h2 { font-size: 1.6rem; }
 nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 nav a {
@@ -47,7 +47,7 @@ nav a {
 
 nav a:hover { color: #93c5fd; }
 
-/* Hero Section avec photo */
+/* Hero Section */
 #accueil {
   text-align: center;
   padding: 180px 5% 120px;
@@ -91,6 +91,7 @@ nav a:hover { color: #93c5fd; }
   text-decoration: none;
   font-weight: bold;
   transition: all 0.4s;
+  margin: 10px 8px;
   box-shadow: 0 5px 15px rgba(59,130,246,0.4);
 }
 
@@ -99,7 +100,15 @@ nav a:hover { color: #93c5fd; }
   transform: translateY(-8px);
 }
 
-/* Autres sections */
+.btn-cv {
+  background: #10b981;
+}
+
+.btn-cv:hover {
+  background: #059669;
+}
+
+/* Sections */
 section {
   padding: 100px 5% 90px;
   max-width: 1200px;
@@ -125,6 +134,7 @@ h2 {
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   transition: all 0.4s;
+  margin-bottom: 20px;
 }
 
 .skills-grid div:hover, .exp:hover, .project:hover {
@@ -135,7 +145,7 @@ h2 {
 .date {
   color: #64748b;
   font-weight: 500;
-  margin: 8px 0;
+  margin: 8px 0 12px;
 }
 
 .btn-small {
@@ -170,7 +180,11 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-  nav ul { gap: 1rem; font-size: 0.95rem; }
+  nav ul { 
+    gap: 1rem; 
+    font-size: 0.9rem; 
+    flex-wrap: wrap;
+  }
   #accueil h1 { font-size: 2.8rem; }
   .profile-img { width: 140px; height: 140px; }
 }
